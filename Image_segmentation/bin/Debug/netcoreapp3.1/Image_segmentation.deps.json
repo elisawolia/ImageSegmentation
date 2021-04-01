@@ -1,0 +1,92 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Image_segmentation/1.0.0": {
+        "dependencies": {
+          "System.Drawing.Common": "6.0.0-preview.2.21154.6"
+        },
+        "runtime": {
+          "Image_segmentation.dll": {}
+        }
+      },
+      "Microsoft.NETCore.Platforms/6.0.0-preview.2.21154.6": {},
+      "Microsoft.Win32.SystemEvents/6.0.0-preview.2.21154.6": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "6.0.0-preview.2.21154.6"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.15406"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.15406"
+          }
+        }
+      },
+      "System.Drawing.Common/6.0.0-preview.2.21154.6": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "6.0.0-preview.2.21154.6"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.15406"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.15406"
+          },
+          "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.15406"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Image_segmentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.NETCore.Platforms/6.0.0-preview.2.21154.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F9kyjXpacc1dz2iRFFO3+m1qqYEbYjTz0L9fa1StyjXyYdpCqmqQWrBk1FGqNd0RPpkPoq9P0ZJoptRYpu64lw==",
+      "path": "microsoft.netcore.platforms/6.0.0-preview.2.21154.6",
+      "hashPath": "microsoft.netcore.platforms.6.0.0-preview.2.21154.6.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/6.0.0-preview.2.21154.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CqMKCb75xr4mJmT6Hh0WkJwE4AN5j0dSaol/5yG/4lyYI34kcqnqYMJglsDe4KVmjwd15IzZR1pcxaUoP/JQQg==",
+      "path": "microsoft.win32.systemevents/6.0.0-preview.2.21154.6",
+      "hashPath": "microsoft.win32.systemevents.6.0.0-preview.2.21154.6.nupkg.sha512"
+    },
+    "System.Drawing.Common/6.0.0-preview.2.21154.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-K/Ncl3LRS8oZdOFfzYw7dA1q7HUbsoP4Bpqlhs54NIK5xqBpYkuHCy8SMcsG7U1ibc0mSz1kYA9njG5xW3i1gg==",
+      "path": "system.drawing.common/6.0.0-preview.2.21154.6",
+      "hashPath": "system.drawing.common.6.0.0-preview.2.21154.6.nupkg.sha512"
+    }
+  }
+}
