@@ -20,15 +20,12 @@ namespace Image_segmentation
 
         private byte[][] mask;
         private double weight; 
-        public Mask(Image image, Image brush, int weight)
+        public Mask (Image image, Image brush, int weight)
         {
             this.image = new Bitmap(image);
             this.brush = new Bitmap(brush);
 
             this.weight = weight == -1 ? 0 : weight;
-
-            if (image.Height != brush.Height || image.Width != brush.Width)
-                throw new Exception("Размер изображения не равен размеру мазков.");
 
             height = image.Height;
             width = image.Width;
@@ -220,6 +217,44 @@ namespace Image_segmentation
             }
 
             return resMask;
+        }
+        
+        public Bitmap getProbMaskRed()
+        {
+            Bitmap redMask =  new Bitmap(width, height);
+            
+            for (int i = 0; i < height; i++)
+            { 
+                for (int j = 0; j < width; j++)
+                {
+                    double red = redProbMask[i][j];
+                    
+                    redMask.SetPixel(j, i, Color.FromArgb((byte) (red * 255),
+                        (byte) (red * 255),
+                        (byte) (red * 255)));
+                }
+            }
+
+            return redMask;
+        }
+        
+        public Bitmap getProbMaskBlue()
+        {
+            Bitmap blueMask =  new Bitmap(width, height);
+            
+            for (int i = 0; i < height; i++)
+            { 
+                for (int j = 0; j < width; j++)
+                {
+                    double blue = blueProbMask[i][j];
+
+                    blueMask.SetPixel(j, i, Color.FromArgb((byte) (blue * 255),
+                        (byte) (blue * 255),
+                        (byte) (blue * 255)));
+                }
+            }
+
+            return blueMask;
         }
         
         public Bitmap getImageWMask()
