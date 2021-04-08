@@ -89,16 +89,16 @@ namespace Image_segmentation
                 Bitmap redProb = mask.getProbMaskRed();
                 Bitmap blueProb = mask.getProbMaskBlue();
                 
-                save(maskRes, debugPath + "Mask.png");
-                save(redProb, debugPath + "RedMask.png");
-                save(blueProb, debugPath + "BlueMask.png");
+                save(maskRes, debugPath, "Mask.png");
+                save(redProb, debugPath, "RedMask.png");
+                save(blueProb, debugPath, "BlueMask.png");
                 
                 maskRes.Dispose();
                 redProb.Dispose();
                 blueProb.Dispose();
             }
             
-            save(maskRes, outputPath + image);
+            save(maskRes, outputPath, image);
 
             imageIm.Dispose();
             brushIm.Dispose();
@@ -106,9 +106,10 @@ namespace Image_segmentation
             return true;
         }
 
-        private void save(Bitmap bitmap, String path)
+        private void save(Bitmap bitmap, String path, String name)
         {
-            bitmap.Save(path);
+            Directory.CreateDirectory(path);
+            bitmap.Save(path + name);
         }
     }
 }
