@@ -6,7 +6,6 @@ namespace Image_segmentation
 {
     class Program
     {
-
         static void PrintHelp()
         {
             Console.WriteLine("To use this program you need to prepare two images: the image and the \"brush\". The seconds image is an image on the white background with two selected segments. You have to draw on the \"figure\" with the red color (r=255,g=0,b=0) and on the background you have to draw with blue color (r=0,g=0,b=255). Place images in the \"Input\" directory. The results will be in the \"Output\" directory. If you want to see the intermedia results, turn on the \"Debug\" option.");

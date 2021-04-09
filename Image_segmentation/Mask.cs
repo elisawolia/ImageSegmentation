@@ -54,8 +54,6 @@ namespace Image_segmentation
 
         private void buildProbMasks()
         {
-            Bitmap maskOne = new Bitmap(width, height);
-            Bitmap maskTwo = new Bitmap(width, height);
             redProbMask = new double[height][];
             blueProbMask = new double[height][];
             
@@ -69,22 +67,10 @@ namespace Image_segmentation
                     double probOne = redHist.getProb(o);
                     double probTwo = blueHist.getProb(o);
 
-                    redProbMask[i][j] = probOne; 
+                    redProbMask[i][j] = probOne;
                     blueProbMask[i][j] = probTwo;
-                    
-                    Color one = Color.FromArgb((byte) (probOne * 255), (byte) (probOne * 255),
-                            (byte) (probOne * 255));
-                    Color two = Color.FromArgb((byte) (probTwo * 255), (byte) (probTwo * 255),
-                            (byte) (probTwo * 255));
-                        
-                    maskOne.SetPixel(j, i, one);
-                    maskTwo.SetPixel(j, i, two);
                 }
             }
-            
-            maskOne.Save("/Users/elizavetavolianica/RiderProjects/ImageSegmentation/Image_segmentation/maskOne.png", ImageFormat.Png);
-            maskTwo.Save("/Users/elizavetavolianica/RiderProjects/ImageSegmentation/Image_segmentation/maskTwo.png", ImageFormat.Png);
-
         }
 
         private void buildMask()
@@ -187,17 +173,6 @@ namespace Image_segmentation
                         mask[i][j] = (mask[i][j] == 0) ? (byte) 1 : (byte) 0;
                     else
                         energy = newEnergy;
-                    
-                    /*
-                     * Восстанавливаем пиксели под мазками в маске
-                     */
-                    
-                    // byte red = brush.GetPixel(j, i).R;
-                    // byte blue = brush.GetPixel(j, i).B;
-                    // if (blue == 255)
-                    //     mask[i][j] = 0;
-                    // else if (red == 255)
-                    //     mask[i][j] = 1;
                 }
             }
         }
